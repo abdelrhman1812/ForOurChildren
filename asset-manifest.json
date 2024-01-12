@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ForOurChildren/static/css/main.16f25c86.css",
-    "main.js": "/ForOurChildren/static/js/main.8d8d5a87.js",
+    "main.css": "/ForOurChildren/static/css/main.dffb1875.css",
+    "main.js": "/ForOurChildren/static/js/main.f5a33918.js",
     "static/js/787.f13c94c8.chunk.js": "/ForOurChildren/static/js/787.f13c94c8.chunk.js",
     "static/media/Layer-1.png": "/ForOurChildren/static/media/Layer-1.dd73475f00a6dd0065b4.png",
     "static/media/fa-solid-900.ttf": "/ForOurChildren/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
@@ -34,12 +34,12 @@
     "static/media/slick.ttf": "/ForOurChildren/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ForOurChildren/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ForOurChildren/index.html",
-    "main.16f25c86.css.map": "/ForOurChildren/static/css/main.16f25c86.css.map",
-    "main.8d8d5a87.js.map": "/ForOurChildren/static/js/main.8d8d5a87.js.map",
+    "main.dffb1875.css.map": "/ForOurChildren/static/css/main.dffb1875.css.map",
+    "main.f5a33918.js.map": "/ForOurChildren/static/js/main.f5a33918.js.map",
     "787.f13c94c8.chunk.js.map": "/ForOurChildren/static/js/787.f13c94c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16f25c86.css",
-    "static/js/main.8d8d5a87.js"
+    "static/css/main.dffb1875.css",
+    "static/js/main.f5a33918.js"
   ]
 }
