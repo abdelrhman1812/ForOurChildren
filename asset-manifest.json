@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ForOurChildren/static/css/main.69dfcd97.css",
-    "main.js": "/ForOurChildren/static/js/main.5a3060f9.js",
+    "main.css": "/ForOurChildren/static/css/main.76c1ea76.css",
+    "main.js": "/ForOurChildren/static/js/main.37da7f6e.js",
     "static/js/787.f13c94c8.chunk.js": "/ForOurChildren/static/js/787.f13c94c8.chunk.js",
     "static/media/Layer-1.png": "/ForOurChildren/static/media/Layer-1.dd73475f00a6dd0065b4.png",
     "static/media/fa-solid-900.ttf": "/ForOurChildren/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
@@ -23,6 +23,7 @@
     "static/media/user.png": "/ForOurChildren/static/media/user.90fdb112926c5220473d.png",
     "static/media/3.jpg": "/ForOurChildren/static/media/3.1d5b3548fd06c6850888.jpg",
     "static/media/children.png": "/ForOurChildren/static/media/children.13e59a65f671c12676e8.png",
+    "static/media/whatsapp-whats-app-svgrepo-com.png": "/ForOurChildren/static/media/whatsapp-whats-app-svgrepo-com.aad6bcdc5e2bc1a9edbd.png",
     "static/media/lecture.png": "/ForOurChildren/static/media/lecture.49ac68930fffbe2a18b7.png",
     "static/media/4.jpg": "/ForOurChildren/static/media/4.97a4f2999384a3c0894b.jpg",
     "static/media/social-media.png": "/ForOurChildren/static/media/social-media.6efbbb465ac49812412e.png",
@@ -30,6 +31,7 @@
     "static/media/men.png": "/ForOurChildren/static/media/men.fb3b1184df3704dbb48a.png",
     "static/media/Notes.png": "/ForOurChildren/static/media/Notes.dbbb712bc09350c1c34e.png",
     "static/media/noet.png": "/ForOurChildren/static/media/noet.742c6ab6e3366c94180f.png",
+    "static/media/gmail-svgrepo-com.png": "/ForOurChildren/static/media/gmail-svgrepo-com.418c465b9acc941df8c8.png",
     "static/media/fa-v4compatibility.ttf": "/ForOurChildren/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
     "static/media/fa-v4compatibility.woff2": "/ForOurChildren/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
     "static/media/slick.svg": "/ForOurChildren/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -37,12 +39,12 @@
     "static/media/slick.ttf": "/ForOurChildren/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ForOurChildren/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ForOurChildren/index.html",
-    "main.69dfcd97.css.map": "/ForOurChildren/static/css/main.69dfcd97.css.map",
-    "main.5a3060f9.js.map": "/ForOurChildren/static/js/main.5a3060f9.js.map",
+    "main.76c1ea76.css.map": "/ForOurChildren/static/css/main.76c1ea76.css.map",
+    "main.37da7f6e.js.map": "/ForOurChildren/static/js/main.37da7f6e.js.map",
     "787.f13c94c8.chunk.js.map": "/ForOurChildren/static/js/787.f13c94c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69dfcd97.css",
-    "static/js/main.5a3060f9.js"
+    "static/css/main.76c1ea76.css",
+    "static/js/main.37da7f6e.js"
   ]
 }
