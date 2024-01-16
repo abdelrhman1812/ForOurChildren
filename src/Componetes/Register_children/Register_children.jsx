@@ -9,21 +9,27 @@ const RegisterChildren = () => {
     let navigate = useNavigate();
 
     async function registerSubmit(values) {
-        setSuccess("Success");
+        setSuccess("تم التسجيل");
         console.log(values);
-        const formData = {
-            name: values.name,
-            familyName: values.familyName,
-            age: values.age,
-            image: values.image.name,
-            gender: values.gender,
-        };
 
+        // Check if the data in local storage is an array
         const storedData = JSON.parse(localStorage.getItem('children')) || [];
 
-        storedData.push(formData);
-        localStorage.setItem('children', JSON.stringify(storedData));
+        if (Array.isArray(storedData)) {
+            const formData = {
+                name: values.name,
+                familyName: values.familyName,
+                age: values.age,
+                image: values.image ? values.image.name : null,
+                gender: values.gender,
+            };
 
+            storedData.push(formData);
+            localStorage.setItem('children', JSON.stringify(storedData));
+        } else {
+            console.error('Data in local storage is not an array:', storedData);
+            // Handle the situation where data in local storage is not an array
+        }
 
         // Add your logic for handling the form submission, including image upload
         setTimeout(() => {
@@ -31,10 +37,11 @@ const RegisterChildren = () => {
         }, 2000);
     }
 
+
     let validationSchema = Yup.object({
-        name: Yup.string().min(3, "Your Name Must be More than 3 characters").max(10, "Your Name Must be less than 10 characters").required("Name must be required"),
-        familyName: Yup.string().min(3, "Your Name Must be More than 3 characters").max(10, "Your Name Must be less than 10 characters").required("Name must be required"),
-        age: Yup.number().required("Age is required"),
+        name: Yup.string().min(3, "يجب أن يكون اسمك أكثر من 3 أحرف").max(10, "يجب أن يكون اسمك أقل من 10 أحرف").required("الاسم مطلوب"),
+        familyName: Yup.string().min(3, "يجب أن يكون اسمك أكثر من 3 أحرف").max(10, "يجب أن يكون اسمك أقل من 10 أحرف").required("الاسم مطلوب"),
+        age: Yup.number().required("العمر مطلوب"),
     });
 
     let formik = useFormik({
@@ -43,7 +50,7 @@ const RegisterChildren = () => {
             familyName: "",
             age: "",
             image: null,
-            gender: "meal", // Add the gender field with a default value
+            gender: "ذكر", // Add the gender field with a default value
         },
         validationSchema,
         validate: function () {
@@ -72,8 +79,8 @@ const RegisterChildren = () => {
         <>
             <div className="register login registerChildren">
                 <div className='container'>
-                    <h2 className='fw-bold'>What about your children? </h2>
-                    <p>Fill in the fields so we can help you</p>
+                    <h2 className='fw-bold'>ماذا عن اطفالك ؟  </h2>
+                    <p>سجل الأن لنتمكن من تقديم المساعده</p>
                     <div className='row g-0'>
                         <div className='form-container m-0'>
                             {error ? (
@@ -89,7 +96,7 @@ const RegisterChildren = () => {
                                     <i className="fa-solid fa-circle-check"></i>
                                     <div className="text">
                                         <p>{success}</p>
-                                        <span>You can now visit the Application</span>
+                                        <span>يمكنك الآن زيارة التطبيق</span>
                                     </div>
                                 </div>
                             ) : ""}
@@ -100,7 +107,7 @@ const RegisterChildren = () => {
                                     </figure>
                                 ) : (
                                     <figure>
-                                        <img src={require('../../images/Childrens/ody.jpg')} alt="Default" />
+                                        <img src={require('../../images/Childrens/1.jpg')} alt="Default" />
 
                                     </figure>
                                 )}
@@ -108,34 +115,36 @@ const RegisterChildren = () => {
                                 <input type="file" onChange={handleFileChange} className='d-none' name="upload" id='upload' />
                             </div>
                             <form onSubmit={formik.handleSubmit}>
+
+
                                 <div className='item'>
-                                    <input type="text" className='form-control' name='name' id='name' value={formik.values.name} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='Name' onKeyUp={displayIcons} />
+                                    <input type="text" className='form-control' name='name' id='name' value={formik.values.name} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='الأسم' onKeyUp={displayIcons} />
                                     <i className='fa fa-user icon-input'></i>
                                     {formik.errors.name && formik.touched.name ? <span className='error'> <i className="fa-solid fa-circle-xmark"></i> {formik.errors.name}</span> : ''}
-                                    {!formik.errors.name && formik.touched.name ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> Your name has been approved </span> : ""}
+                                    {!formik.errors.name && formik.touched.name ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> تمت الموافقة على اسمك  </span> : ""}
                                 </div>
                                 <div className='item'>
-                                    <input type="text" className='form-control' name='familyName' id='familyName' value={formik.values.familyName} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='Family Name' onKeyUp={displayIcons} />
+                                    <input type="text" className='form-control' name='familyName' id='familyName' value={formik.values.familyName} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='اسم العائله' onKeyUp={displayIcons} />
                                     <i className='fa fa-user icon-input'></i>
                                     {formik.errors.familyName && formik.touched.familyName ? <span className='error'> <i className="fa-solid fa-circle-xmark"></i> {formik.errors.familyName}</span> : ''}
-                                    {!formik.errors.familyName && formik.touched.familyName ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> Your name has been approved </span> : ""}
+                                    {!formik.errors.familyName && formik.touched.familyName ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> تمت الموافقة على اسمك  </span> : ""}
                                 </div>
 
                                 {/* Age */}
                                 <div className='item'>
-                                    <input type="number" className='form-control' name='age' id='age' value={formik.values.age} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='Age' onKeyUp={displayIcons} />
+                                    <input type="number" className='form-control' name='age' id='age' value={formik.values.age} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='العمر' onKeyUp={displayIcons} />
                                     <i className="fa-solid fa-hashtag icon-input"></i>
                                     {formik.errors.age && formik.touched.age ? <span className='error'> <i className="fa-solid fa-circle-xmark"></i> {formik.errors.age}</span> : ''}
-                                    {!formik.errors.age && formik.touched.age ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> Your age has been approved </span> : ""}
+                                    {!formik.errors.age && formik.touched.age ? <span className='is-valid text-success fw-bold'><i className="fa-solid fa-circle-check"></i> تمت الموافقة على عمرك </span> : ""}
                                 </div>
                                 <div className="select">
                                     <select name="gender" id="gender" {...formik.getFieldProps("gender")}>
-                                        <option value="meal">Meal</option>
-                                        <option value="Female">Female</option>
+                                        <option value="meal">ذكر</option>
+                                        <option value="Female">انثي</option>
                                     </select>
                                 </div>
                                 <div className='btns ' >
-                                    <button disabled={!(formik.isValid && formik.dirty)} type='submit' >Login</button>
+                                    <button disabled={!(formik.isValid && formik.dirty)} type='submit' >تسجيل</button>
                                 </div>
                             </form>
                         </div>

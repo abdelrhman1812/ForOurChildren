@@ -8,13 +8,12 @@ const Childrens = () => {
 
 
 
-
-
     useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem('children'));
+        const childrenArray = Array.isArray(storedData) ? storedData : [];
 
-        const storedData = JSON.parse(localStorage.getItem('children')) || [];
-        setChildres(storedData);
-        console.log(storedData)
+        setChildres(childrenArray);
+        console.log(childrenArray);
     }, []);
 
     return <>
@@ -22,30 +21,54 @@ const Childrens = () => {
         <div className="childrens">
 
             <div className='container'>
-                <h2> <i class="fa-solid fa-child-reaching"></i>Your children</h2>
+                <h2> <i className="fa-solid fa-child-reaching"></i>اطفالك</h2>
                 <div className="row mt-3 g-3">
-                    {childres?.map((child, index) => (
-                        <div key={index} className=" col-md-6 col-lg-4">
-                            <div className="item">
-                                <div className="image">
-                                    <img src={require(`../../images/Childrens/${child.image}`)} alt="" />
+                    {childres.length === 0 ? <div className=" col-md-6 col-lg-4">
+                        <div className="item">
+                            <div className="image">
+                                <img src={require(`../../images/Childrens/1.jpg`)} alt="" />
 
-                                </div>
-                                <div className="data">
-                                    <h5>Name : <span>{child.name}</span></h5>
-                                    <h5>Gender : <span>{child.gender}</span></h5>
-                                    <h5>Age : <span>{child.age}</span></h5>
-                                    <div className="icons">
-                                        <i className="fa-solid fa-pen-nib"></i>
-                                        <i className="fa-solid fa-trash"></i>
+                            </div>
+                            <div className="data">
+                                <h5>الاسم : <span>مي عصام</span></h5>
+                                <h5>العمر : <span>23</span></h5>
+                                <h5>النوع : <span>أنثي</span></h5>
+                                <div className="icons">
+                                    <i className="fa-solid fa-pen-nib"></i>
+                                    <i className="fa-solid fa-trash"></i>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div> :
+                        <>
+                            {childres?.map((child, index) => (
+                                <div key={index} className=" col-md-6 col-lg-4">
+                                    <div className="item">
+                                        <div className="image">
+                                            <img src={require(`../../images/Childrens/${child.image}`)} alt="" />
 
-                    <Link className='return' to={'/registerChildren'}>  Return To Register <i className="fa-solid fa-retweet"></i>      </Link>
+                                        </div>
+                                        <div className="data">
+                                            <div className="details">
+
+                                                <h5>الاسم : <span>{child.name}</span></h5>
+                                                <h5>النوع : <span>{child.gender}</span></h5>
+                                                <h5>العمر : <span>{child.age}</span></h5>
+                                            </div>
+                                            <div className="icons">
+                                                <i className="fa-solid fa-pen-nib"></i>
+                                                <i className="fa-solid fa-trash"></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </>}
+
+
+                    <Link className='return' to={'/registerChildren'}>  العوده للتسجيل <i className="fa-solid fa-retweet"></i>      </Link>
 
 
 
