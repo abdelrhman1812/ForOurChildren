@@ -1,0 +1,345 @@
+/* ==============================  header ============================== */
+
+header {
+  height: 100vh;
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+    url('../../assets/images/Header/slide1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+header .data {
+  color: var(--light);
+  padding-right: 30px;
+}
+
+header .data h1 {
+  font-size: 60px;
+  transition: letter-spacing 0.2s ease;
+}
+
+header .data h1:hover {
+  letter-spacing: 1px;
+}
+
+header .data p {
+  font-size: 22px;
+}
+
+header .data .btns button {
+  border: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: var(--light);
+  font-size: 22px;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 150px;
+  transition: transform 0.2s ease, letter-spacing 0.2s ease;
+}
+
+header .data .btns button:hover {
+  letter-spacing: 1px;
+  transform: scale(1.1);
+}
+
+header .data .btns button:first-of-type {
+  background-color: #00BAA4;
+}
+
+header .data .btns button:last-of-type {
+  background-color: #D29839;
+}
+
+/* ==============================  services ============================== */
+
+
+
+.services .item {
+  position: relative;
+  background-color: var(--primary-color);
+  padding: 30px 10px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+  height: 400px;
+  overflow: hidden;
+}
+
+.services .item::before,
+.services .item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.services .item::before {
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+    url('../../assets/images/Services/logo.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.services .item::after {
+  background-color: rgba(222, 166, 77, 0.9);
+}
+
+.services .item p {
+  z-index: 1;
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  color: var(--light);
+}
+
+.services .item .icon {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.services .item .icon img {
+  width: 50px;
+  transition: all 0.2s ease;
+
+}
+
+.services .item.green::after {
+  background-color: var(--green-color);
+}
+
+.services .item.red::after {
+  background-color: var(--red-color);
+}
+
+@media (max-width: 991px) {
+  .services .item {
+    height: auto;
+  }
+
+  .services .item::before {
+
+    background-attachment: fixed;
+  }
+
+}
+
+.services .item:hover {
+  box-shadow: var(--shadow);
+}
+
+.services .item:hover img {
+  transform: rotate(45deg) scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* ============================== Gaols  ============================== */
+
+
+
+.bg-goals {
+  padding: 120px 0 0 0;
+  background-color: var(--light);
+}
+
+.goals h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.goals .item {
+  border-radius: 10px;
+  background-color: var(--light);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.goals .item .image {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.goals .item .image img {
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.goals .item .text {
+  padding: 5px;
+  text-align: center;
+}
+
+.goals .item .text p {
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--black);
+}
+
+.goals .item .text button {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--light);
+  border-radius: 30px;
+  margin: 10px 0 20px;
+  width: 50% !important;
+}
+
+.goals .item:hover .image img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+/* ============================== Achievements ============================== */
+
+.achievements {
+  background-size: cover;
+  background-position: center center;
+  /* background-image: url('../../assets/images/Achievements/Layer-7-1.png'); */
+}
+
+.achievements .image {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../../assets/images/Achievements/achievments.jpg');
+}
+
+.achievements .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.achievements .item i {
+  font-size: 30px;
+  color: var(--main-color);
+
+}
+
+.achievements .item h3 {
+  margin-top: 10px;
+  color: #D29839;
+}
+
+
+.achievements .item:hover img {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* ============================== Details ============================== */
+
+.details {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+
+.details .item {
+  padding: 10px;
+}
+
+.details .item h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+
+.details .item button {
+  border: none;
+  width: 150px;
+  padding: 5px 10px;
+  color: var(--light);
+  border-radius: 20px;
+  transition: background-color 0.5s;
+  background-color: var(--main-color-dark);
+}
+
+.details .item button:hover {
+  background-color: var(--main-color);
+}
+
+.details .image {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.details .image img {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  border-radius: 15px;
+  transition: transform 0.5s;
+}
+
+.details .image:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 667px) {
+  .details .image img {
+    width: 100%;
+  }
+}
+
+
+/* ==========  sharing ========== */
+
+
+.sharing {
+  padding: 100px 0;
+  text-align: center;
+  background-color: var(--bg-section);
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+    url('../../assets/images/Achievements/Layer-7-1.png');
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.sharing h3 {
+  color: var(--light);
+}
+
+
+.over-lay::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: url('../../assets/images/nav.png') center center repeat-x;
+  z-index: 1;
+  border-bottom: 1px dashed var(--light);
+}
+
+.over-lay::after {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: url('../../assets/images/nav_affter.png') center center repeat-x;
+  z-index: 1;
+}

@@ -1,0 +1,92 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --black: #000;
+  --light: #fff;
+  --bg-main: #fff;
+  /* --bg-main: #F9EFDB; */
+  --bg-section: #f3f8ff6e;
+  --span-color: #777;
+  --main-color: #F11A23;
+  --opacity-black: #000000b3;
+  --main-color-dark: #e6185e;
+  --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+  /* ------------- */
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --green-color: #00baa4f0;
+  --red-color: #d45747e6;
+  --bg-body: #FFF5F3
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  /* 300 - 400 - 500 - 600 - 700 - 800 */
+  background-color: #FFF5F3;
+  background: url('../images/bg-index-body.jpg');
+}
+
+
+i {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* .active {
+  color: var(--main-color) !important;
+} */
+
+
+/* ========== Navbar ========== */
+
+nav {
+  background-color: #444444ba !important;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav .logo img {
+  width: 60px;
+}
+
+nav ul li a span {
+  font-size: 26px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: red !important;
+  font-weight: 600;
+  position: relative;
+
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  background-color: #F11A23;
+  height: 2px;
+  width: 60px;
+}

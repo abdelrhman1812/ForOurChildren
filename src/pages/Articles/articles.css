@@ -1,0 +1,72 @@
+.articles {
+    min-height: 100vh;
+}
+
+.article-item {
+    background-color: var(--light);
+}
+
+
+
+.header-article {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('../../assets/images/Articles/slide.jpg');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-article ul {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.header-article ul::after {
+    width: 40px;
+    bottom: -15px;
+}
+
+.header-article ul li a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.header-article ul li a.active {
+    color: var(--main-color);
+
+}
+
+.header-article ul li a:hover {
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+
+.article-item .item {
+    /* width: 75%;
+    margin: 10px auto; */
+    padding: 20px;
+    background-color: var(--light);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+}
+
+.article-item .item .data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.article-item .item .data img {
+    width: 50px;
+    border-radius: 50%;
+
+}

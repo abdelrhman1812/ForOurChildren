@@ -1,0 +1,87 @@
+/* =============  Doctors ============= */
+
+.doctors {
+    min-height: 100vh;
+}
+
+
+
+.header-doctor {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('../../assets/images/Doctor/hero.jpg');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-doctor ul {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.header-doctor ul::after {
+    width: 40px;
+    bottom: -15px;
+}
+
+.header-doctor ul li a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.header-doctor ul li a.active {
+    color: var(--main-color);
+
+}
+
+.header-doctor ul li a:hover {
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+
+/* doctor-item */
+
+.doctor-item {
+    padding: 60px 10px;
+    background-color: var(--light);
+    text-align: center;
+}
+
+
+
+.doctor-item h3 {
+    font-size: 26px;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    font-family: cursive;
+    color: var(--main-color);
+}
+
+.doctor-item h3::after {
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    transform: translate(-10px);
+    background-color: var(--main-color);
+}
+
+.doctor-item h3::before {
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    transform: translate(36px);
+    background-color: var(--main-color);
+}

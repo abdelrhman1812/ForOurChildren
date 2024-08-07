@@ -1,0 +1,419 @@
+/* ========== Global Styles ========== */
+
+/* ========== Header About Styles ========== */
+.header-about {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('../../assets/images/About/slide-02-1920x810.jpg');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-about ul {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+
+
+.header-about ul::after {
+    width: 40px;
+    bottom: -15px;
+}
+
+.header-about ul li a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.header-about ul li a.active {
+    color: var(--main-color);
+
+}
+
+.header-about ul li a:hover {
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+/* ========== About Us Section Styles ========== */
+
+
+.about-us h2,
+.about-us h3 {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-us h2::before,
+.about-us h2::after,
+.about-us h3::before,
+.about-us h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.about-us h2::before,
+.about-us h3::before {
+    width: 60px;
+    bottom: -8px;
+}
+
+.about-us h2::after,
+.about-us h3::after {
+    width: 40px;
+    bottom: -14px;
+}
+
+.about-us .bg-img {
+    background-color: var(--bg-body);
+}
+
+.about-us p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.about-us ul {
+    padding: 10px;
+    list-style-type: square;
+}
+
+.about-us ul li {
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;
+
+}
+
+
+/* ========== achievements_about  ========== */
+.achievements_about {
+    background-color: var(--light);
+}
+
+.item .item-icon {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.achievements_about p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.item .item-icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .9);
+    transition: .5s;
+    z-index: 1;
+}
+
+.item .item-icon span {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.item .item-icon span:last-child {
+    left: auto;
+    right: 0;
+}
+
+.item .item-icon i {
+    position: relative;
+    z-index: 2;
+}
+
+.item .item-text {
+    position: relative;
+    min-height: 250px;
+    padding: 30px;
+    border-radius: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.item .item-text::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .9);
+    transition: .5s;
+    z-index: 1;
+}
+
+.item .item-text * {
+    position: relative;
+    z-index: 2;
+}
+
+.item:hover .item-icon::before,
+.item:hover .item-text::before {
+    background: transparent;
+}
+
+.item * {
+    transition: .5s;
+}
+
+.achievements_about .item:hover * {
+    color: #FFFFFF !important;
+}
+
+
+
+
+/* ========== services_about ========== */
+
+.services_about {
+    background-color: var(--light);
+}
+
+
+.services_about p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.services_about .item p {
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    margin: 0;
+    background-color: #03a9f417;
+    padding: 20px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+
+}
+
+.services_about .item p i {
+    font-size: 26px;
+    margin-left: 10px;
+    transition: all 1.5s ease;
+    color: var(--main-color);
+}
+
+.services_about .item p:hover {
+    color: var(--light);
+    background-color: #2196f3;
+    box-shadow: var(--shadow);
+}
+
+.services_about .item p:hover i {
+    color: var(--light);
+    transform: rotate(360deg);
+    transition: all 1.5s ease;
+
+}
+
+.services_about h3,
+.achievements_about h3,
+.teams h3 {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.services_about h3::before,
+.services_about h3::after,
+.achievements_about h3::before,
+.achievements_about h3::after,
+.teams h3::before,
+.teams h3::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.services_about h3::before,
+.achievements_about h3::before,
+.teams h3::before {
+    width: 60px;
+    bottom: -8px;
+}
+
+.services_about h3::after,
+.achievements_about h3::after,
+.teams h3::after {
+    width: 40px;
+    bottom: -14px;
+}
+
+.services_about .title {
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    margin: 20px 0;
+}
+
+.services_about .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    right: -14px;
+    top: 27px;
+    transform: translate(50%, -50%);
+    background-color: var(--main-color);
+}
+
+
+/* ========== Teams ========== */
+
+.team {
+    overflow: hidden;
+    padding: 100px 20px;
+    background-color: var(--light);
+}
+
+/* @media (max-width:991px) {
+    .team {
+        padding: 100px 60px;
+    }
+} */
+
+.team h5,
+.achievements_about h5 {
+    font-size: 26px;
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    font-family: cursive;
+    color: var(--main-color);
+}
+
+.team h5::after,
+.achievements_about h5::after {
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    transform: translate(-10px);
+    background-color: var(--main-color);
+}
+
+.team h5::before,
+.achievements_about h5::before {
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    transform: translate(36px);
+    background-color: var(--main-color);
+}
+
+.team h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0 30px 0;
+    color: var(--second-color);
+}
+
+.team .item {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: all 2s;
+    border-radius: 10px;
+    padding: 20px 20px 0 20px;
+    height: calc(100% - 60px);
+    box-shadow: var(--shadow);
+    background-color: var(--bg-section);
+}
+
+
+
+.team .item figure img {
+    border-radius: 50%;
+}
+
+.team .item figure figcaption {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.team .item figure figcaption p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.team .item figure figcaption span {
+    color: var(--span-color);
+}
+
+.team .item .social {
+    display: flex;
+    transition: all 0.5s;
+    justify-content: center;
+}
+
+.team .item .social i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 10px;
+    font-size: 18px;
+    align-items: center;
+    color: var(--bg-body);
+    justify-content: center;
+    border-top-left-radius: 30px;
+    background-color: var(--main-color);
+    border-top-right-radius: 30px;
+}
+
+.team .item:hover {
+    height: 100%;
+    transition: all 0.5s;
+}
