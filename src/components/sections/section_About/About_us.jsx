@@ -12,13 +12,13 @@ const About_us = () => {
 
         Aos.init({
             offset: 200,
-            // duration: 1000,
+            duration: 1000,
             easing: 'ease-in-sine',
             delay: 0,
         });
     }, [])
     return <>
-        <section className='about-us'>
+        <section className='about-us overflow-hidden'>
             <div className="container-xxl py-5 bg-light">
                 <div className="container py-2">
                     <div className="row g-5 align-items-center">
@@ -48,8 +48,11 @@ const About_us = () => {
                                 </li>
                             </ul>
                             <div className="row g-4 align-items-center">
-                                <div className="col-sm-6" >
-                                    <Link className="btn btn-danger w-100 w-md-50 rounded-pill py-2 px-5" to="/">تواصل معنا</Link>
+                                <div className="col-sm-6">
+                                    <Link
+                                        to="https://wa.me/+2001014316195?text=مرحبا"
+                                        target="_blank"
+                                        className="btn btn-danger w-100 w-md-50 rounded-pill py-2 px-5" >تواصل معنا</Link>
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="d-flex align-items-center gap-2">
@@ -62,7 +65,7 @@ const About_us = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6 about-img  " data-aos="fade-right" >
+                        <div className="col-lg-6 about-img" data-aos="fade-right" >
                             <div className="row">
                                 <div className="col-12 text-center">
                                     <img className="img-fluid w-75 rounded-circle bg-img p-3" src={aboutImage1} alt="About 1" />

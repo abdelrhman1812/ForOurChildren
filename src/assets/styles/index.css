@@ -90,3 +90,11 @@ nav ul li a span {
   height: 2px;
   width: 60px;
 }
+
+@media (max-width:991px) {
+  .nav-link.active::after {
+    right: 2%;
+    transform: translate(0);
+    background-color: transparent;
+  }
+}

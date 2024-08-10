@@ -7,23 +7,22 @@ import praying from '../../../assets/images/Services/icon-praying-grey.png'
 
 
 const Services = () => {
+
     useEffect(() => {
 
         Aos.init({
             offset: 200,
-            // duration: 1000,
+            duration: 1000,
             easing: 'ease-in-sine',
             delay: 0,
         });
     }, [])
     return <>
-        <div className=' container-xxl p-0 ' >
+        <div className=' container-xxl p-0  ' >
             <section className="services">
-                <div className="row g-0 p ">
+                <div className="row g-0  ">
                     <div className=" col-lg-4">
-                        <div className="item red" data-aos="fade-right"
-                            data-aos-easing="linear"
-                            data-aos-duration="1500">
+                        <div className="item red" data-aos="zoom-in-up">
                             <div className="icon">
                                 <img src={donation} className='w-100' alt="" />
                             </div>
@@ -47,9 +46,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="item yellow" data-aos="fade-down"
-                            data-aos-easing="linear"
-                            data-aos-duration="1500">
+                        <div className="item yellow" data-aos="zoom-in-up">
                             <div className="icon">
                                 <img src={dove} className='w-100' alt="" />
                             </div>
@@ -69,9 +66,7 @@ const Services = () => {
                     </div>
 
                     <div className="col-lg-4">
-                        <div className="item  green" data-aos="fade-left"
-                            data-aos-easing="linear"
-                            data-aos-duration="1500">
+                        <div className="item  green" data-aos="zoom-in-up">
                             <div className="icon">
                                 <img src={praying} className='w-100' alt="" />
                             </div>

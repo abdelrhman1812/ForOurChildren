@@ -1,0 +1,102 @@
+.contact {
+    min-height: 100vh;
+}
+
+
+
+
+.header-contact {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('../../assets/images/Contact/slide.jpg');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-contact ul {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.header-contact ul::after {
+    width: 40px;
+    bottom: -15px;
+}
+
+.header-contact ul li a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.header-contact ul li a.active {
+    color: var(--main-color);
+
+}
+
+.header-contact ul li a:hover {
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.contact_us {
+    background-color: var(--light);
+}
+
+.contact_us .item i {
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+.contact_us .item p {
+    margin: 10px 0;
+    font-weight: 700;
+
+}
+
+
+.contact_us .item a {
+    font-weight: 700;
+
+}
+
+.contact_us .item:hover {
+    background-color: var(--main-color);
+}
+
+.contact_us .item:hover * {
+    color: var(--light);
+}
+
+.contact_us .item:hover a {
+    color: var(--light) !important;
+}
+
+.contact_us .form {
+    background-color: var(--bg-section);
+}
+
+.contact_us .image {
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url('../../assets/images/Contact/Form.webp');
+}
+
+.contact_us .form-data input,
+.contact_us .form-data textarea {
+    padding: 10px;
+}
+
+.contact_us .form-data input:focus,
+.contact_us .form-data textarea:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+}

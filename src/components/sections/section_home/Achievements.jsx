@@ -15,14 +15,18 @@ const Achievements = () => {
     }, [])
     return <>
 
-        <div className="achievements">
+        <div className="achievements overflow-hidden">
             <div className='container-xxl'>
                 <div className="row ">
-                    <div className="col-md-6 p-0">
+                    <div className="col-md-6 p-0" data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                         <div className="image">
                         </div>
                     </div>
-                    <div className="col-md-6 d-flex p-3" >
+                    <div className="col-md-6 d-flex p-3" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" >
                         <div className="row ">
 
                             <div className="item">

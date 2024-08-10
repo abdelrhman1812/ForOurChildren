@@ -14,16 +14,16 @@ const Header = () => {
     return <>
 
 
-        <div className='container-xxl over-lay  position-relative  p-0'>
+        <div className='container-xxl over-lay overflow-hidden position-relative  p-0'>
 
             <header >
                 <div className="container">
                     <div className="row">
                         <div className="data">
-                            <h1 data-aos="flip-up" data-aos-duration="1000">   مبادرة من أجل أطفالنا   </h1>
-                            <p data-aos="zoom-out" data-aos-duration="1000">علشان ولادنا هما حاصرنا , هما المستقبل</p>
-                            <div className="btns" data-aos="zoom-in" data-aos-duration="1000">
-                                <button>عن المبادره</button>
+                            <h1 data-aos="fade-down" data-aos-duration="1000">   مبادرة من أجل أطفالنا   </h1>
+                            <p data-aos="flip-up" data-aos-duration="1000">علشان ولادنا هما حاصرنا , هما المستقبل</p>
+                            <div className="btns" data-aos="fade-up" data-aos-duration="1000">
+                                <button >عن المبادره</button>
                                 <button>تواصل معنا</button>
                             </div>
                         </div>

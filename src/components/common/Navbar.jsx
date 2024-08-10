@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/Nav/logo.png';
 
 const Navbar = () => {
     return (
@@ -62,6 +62,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                         </ul>
+                        <Link to={'/contact'} className='btn btn-danger'>تواصل معنا</Link>
                     </div>
                 </div>
             </nav>

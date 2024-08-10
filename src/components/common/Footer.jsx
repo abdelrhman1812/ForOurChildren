@@ -1,13 +1,24 @@
+import Aos from 'aos';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/footer.css';
 const Footer = () => {
+    useEffect(() => {
+
+        Aos.init({
+            offset: 200,
+            // duration: 1000,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+    }, [])
     return <>
         <footer>
-            <div className="container-xxl  text-white-50 footer pt-5 ">
+            <div className="container-xxl  text-white-50 footer pt-5 overflow-hidden">
                 <div className="container py-5">
                     <div className="row g-5">
-                        <div className="col-lg-4 col-md-6">
-                            <h3 className="text-white mb-4">تواصل معنا</h3>
+                        <div className="col-lg-4 col-md-6" data-aos="zoom-in">
+                            <h3 className="text-white mb-4" >تواصل معنا</h3>
                             <p className="mb-2"><i className="fa fa-map-marker-alt ms-3"></i>بورسعيد </p>
                             <p className="mb-2"><i className="fa fa-phone-alt ms-3"></i>01014316195</p>
                             <p className="mb-2"><i className="fa fa-envelope ms-3"></i>forourchildrenofficial@gmail.com</p>
@@ -20,7 +31,7 @@ const Footer = () => {
                         </div>
 
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" data-aos="zoom-in">
                             <h3 className="text-white mb-4">روابط سريعة</h3>
                             <Link className="btn link text-white-50" to=""> الرئيسية</Link>
                             <Link className="btn link text-white-50" to="">اتصل بنا</Link>
@@ -54,7 +65,7 @@ const Footer = () => {
                             </div>
                         </div> */}
 
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" data-aos="zoom-in">
                             <h3 className="text-white mb-4">النشرة الإخبارية</h3>
                             <p>اشترك معنا</p>
                             <div className="position-relative mx-auto" >
@@ -66,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="container">
-                    <div className="copyright">
+                    <div className="copyright" >
                         <div className=" text-center  mb-3 mb-md-0">
                             &copy;
                             <span className='ms-2'> جميع الحقوق محفوظة</span>

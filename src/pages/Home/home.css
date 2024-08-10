@@ -13,6 +13,8 @@ header {
 
 }
 
+
+
 header .data {
   color: var(--light);
   padding-right: 30px;
@@ -41,6 +43,13 @@ header .data .btns button {
   font-weight: bold;
   width: 150px;
   transition: transform 0.2s ease, letter-spacing 0.2s ease;
+}
+
+@media (max-width:567px) {
+  header .data .btns button {
+    width: 93%;
+    margin: 10px 0;
+  }
 }
 
 header .data .btns button:hover {
@@ -336,7 +345,7 @@ header .data .btns button:last-of-type {
 .over-lay::after {
   position: absolute;
   content: "";
-  height: 19px;
+  height: 16px;
   width: 100%;
   bottom: 0;
   left: 0;

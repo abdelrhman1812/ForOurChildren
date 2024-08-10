@@ -1,18 +1,35 @@
+import Aos from "aos";
+import { useEffect } from "react";
 
 const Achievements_about = () => {
+    useEffect(() => {
+
+        Aos.init({
+            offset: 200,
+            // duration: 1000,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
+    }, [])
     return <>
 
         <div className="container-xxl py-5 achievements_about ">
             <div className="container p-2 ">
-                <h5 >إنجازاتنا</h5>
-                <p className=" text-center text-light-emphasis">
+                <h5 data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000" >إنجازاتنا</h5>
+                <p className=" text-center text-light-emphasis" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">
                     حققت مبادرة علشان ولدنا العدید من الإنجازات الملهمة والمشاركات الفعالة في مختلف المحافل
                     والأحداث، ومن أبرز إنجازاتها:
                 </p>
 
                 <div className="row g-4 my-5" >
                     <div className="col-lg-3 col-sm-6  " >
-                        <div className="item">
+                        <div className="item" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="item-icon bg-primary">
                                 <span className="bg-primary"></span>
                                 <i className="fa fa-bus-alt fa-3x text-primary"></i>
@@ -27,7 +44,9 @@ const Achievements_about = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div className="item">
+                        <div className="item" data-aos="flip-right"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="item-icon bg-success">
                                 <span className="bg-success"></span>
                                 <i className="fa fa-futbol fa-3x text-success"></i>
@@ -41,7 +60,9 @@ const Achievements_about = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div className="item">
+                        <div className="item" data-aos="flip-right"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="item-icon bg-warning">
                                 <span className="bg-warning"></span>
                                 <i className="fa fa-home fa-3x text-warning"></i>
@@ -56,7 +77,9 @@ const Achievements_about = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div className="item">
+                        <div className="item" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="item-icon bg-info">
                                 <span className="bg-info"></span>
                                 <i className="fa fa-chalkboard-teacher fa-3x text-info"></i>

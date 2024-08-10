@@ -85,3 +85,10 @@
     transform: translate(36px);
     background-color: var(--main-color);
 }
+
+.doctor-item .item:hover img {
+
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+
+}

@@ -1,0 +1,47 @@
+.games {
+    min-height: 100vh;
+}
+
+.header-games {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url('../../assets/images/Games/pexels-jadson-thomas-164235-1500610.jpg');
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-games ul {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.header-games ul::after {
+    width: 40px;
+    bottom: -15px;
+}
+
+.header-games ul li a {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.header-games ul li a.active {
+    color: var(--main-color);
+
+}
+
+.header-games ul li a:hover {
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.item_games .item:hover img {
+    transform: scale(1.1);
+}

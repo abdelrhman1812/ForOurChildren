@@ -10,7 +10,7 @@ const Goals = () => {
 
         Aos.init({
             offset: 200,
-            // duration: 1000,
+            duration: 1000,
             easing: 'ease-in-sine',
             delay: 0,
         });
@@ -18,12 +18,12 @@ const Goals = () => {
     return <>
 
 
-        <div className="goals ">
+        <div className="goals overflow-hidden">
             <div className='container-xxl py-5  bg-goals'>
                 <h2 className='py-5'> بنعمل اي علشان نوعي الاباء والامهات ؟</h2>
 
                 <div className="row g-3 m-0">
-                    <div className="col-md-4" data-aos="fade-up">
+                    <div className="col-md-4" data-aos="fade-right">
                         <div className="item ">
                             <div className="image">
                                 <img src={one} className='w-100' alt="" />
@@ -34,7 +34,7 @@ const Goals = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4" data-aos="fade-down">
+                    <div className="col-md-4" data-aos="fade-up">
                         <div className="item ">
                             <div className="image">
                                 <img src={two} className='w-100' alt="" />
